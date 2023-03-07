@@ -6,7 +6,7 @@ const Buy = ({ state }) => {
     const name = document.querySelector("#name").value;
     const message = document.querySelector("#message").value;
     console.log(name, message, contract);
-    const amount = { value: ethers.utils.parseEther("0.001") };
+    const amount = { value: ethers.utils.parseEther("0.01") };
     const transaction = await contract.buyChai(name, message, amount);
     await transaction.wait();
     console.log("Transaction is done");
@@ -25,12 +25,12 @@ const Buy = ({ state }) => {
             />
           </div>
           <div className="mb-3">
-            <label className="form-label">Message</label>
+            <label className="form-label">Thought</label>
             <input
               type="text"
               className="form-control"
               id="message"
-              placeholder="Enter Your Message"
+              placeholder="Enter Your Thought"
             />
           </div>
           <button
@@ -38,7 +38,7 @@ const Buy = ({ state }) => {
             className="btn btn-primary"
             disabled={!state.contract}
           >
-            Pay
+            Show
           </button>
         </form>
       </div>

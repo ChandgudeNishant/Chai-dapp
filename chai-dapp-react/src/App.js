@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import Buy from "./components/Buy";
 import Memos from "./components/Memos";
-import chai from "./chai.png";
+import header from "./header.png";
 import "./App.css";
 
 function App() {
@@ -54,12 +54,12 @@ function App() {
   // console.log(state);
   return (
     <div style={{ backgroundColor: "#EFEFEF", height: "100%" }}>
-      <img src={chai} className="img-fluid" alt=".." width="100%" />
+      <img src={header} className="img-fluid" alt=".." width="100%" />
       <p
         class="text-muted lead "
         style={{ marginTop: "10px", marginLeft: "5px" }}
       >
-        <small>Connected Account - {account}</small>
+        <small><b>Connected Account</b> - {account}</small>
       </p>
       <div className="container">
         <Buy state={state} />

@@ -13,7 +13,7 @@ const Memos = ({ state }) => {
 
   return (
     <>
-      <p style={{ textAlign: "center", marginTop: "20px" }}>Messages</p>
+      <p style={{ textAlign: "center", marginTop: "20px" }}>Thoughts</p>
       {memos.map((memo) => {
         return (
           <div
