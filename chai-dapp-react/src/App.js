@@ -1,4 +1,4 @@
-import abi from "./contract/chai.json";
+import abi from "./contract/thought.json";
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import Buy from "./components/Buy";
@@ -15,7 +15,7 @@ function App() {
   const [account, setAccount] = useState("None");
   useEffect(() => {
     const connectWallet = async () => {
-      const contractAddress = "0x6563b201bafe472df69546ca5bb851027adea95f";
+      const contractAddress = "0xd340E5A7699f26E5111d96D089817f4Bf5547cd3";
       const contractABI = abi.abi;
       try {
         const { ethereum } = window;
@@ -53,7 +53,9 @@ function App() {
   }, []);
   // console.log(state);
   return (
-    <div style={{ backgroundColor: "#EFEFEF", height: "100%" }}>
+    <div 
+    style={{ backgroundColor: "#EFEFEF", height: "100%" }}
+    >
       <img src={header} className="img-fluid" alt=".." width="100%" />
       <p
         class="text-muted lead "

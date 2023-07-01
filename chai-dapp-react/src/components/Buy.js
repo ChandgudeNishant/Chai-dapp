@@ -1,20 +1,22 @@
 import { ethers } from "ethers";
 const Buy = ({ state }) => {
-  const buyChai = async (event) => {
+  const giveThought = async (event) => {
     event.preventDefault();
     const { contract } = state;
     const name = document.querySelector("#name").value;
     const message = document.querySelector("#message").value;
     console.log(name, message, contract);
     const amount = { value: ethers.utils.parseEther("0.01") };
-    const transaction = await contract.buyChai(name, message, amount);
+    const transaction = await contract.giveThought(name, message, amount);
     await transaction.wait();
     console.log("Transaction is done");
   };
   return (
     <>
-      <div className="container-md" style={{ width: "50%", marginTop: "25px" }}>
-        <form onSubmit={buyChai}>
+      <div className="container-md"
+       style={{ width: "50%", marginTop: "25px" }}
+       >
+        <form onSubmit={giveThought}>
           <div className="mb-3">
             <label className="form-label">Name</label>
             <input

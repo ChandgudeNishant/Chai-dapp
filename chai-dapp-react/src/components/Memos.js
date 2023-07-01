@@ -5,7 +5,7 @@ const Memos = ({ state }) => {
 
   useEffect(() => {
     const memosMessage = async () => {
-      const memos = await contract.getMemos();
+      const memos = await contract.showThought();
       setMemos(memos);
     };
     contract && memosMessage();
@@ -13,7 +13,9 @@ const Memos = ({ state }) => {
 
   return (
     <>
-      <p style={{ textAlign: "center", marginTop: "20px" }}>Thoughts</p>
+      <p 
+      style={{ textAlign: "center", marginTop: "20px" }}
+      >Thoughts</p>
       {memos.map((memo) => {
         return (
           <div
